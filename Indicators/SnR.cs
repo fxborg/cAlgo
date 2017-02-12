@@ -202,7 +202,5 @@ namespace cAlgo
             }
             return (res);
         }
-
-
     }
 }
