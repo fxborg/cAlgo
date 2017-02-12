@@ -54,7 +54,7 @@ namespace cAlgo
             if (i <= Period + 1)
             {
                 up = up2 = Highest(MarketSeries.High, Period, i - 1);
-                dn = dn2 = Lowest(MarketSeries.Close, Period, i - 1);
+                dn = dn2 = Lowest(MarketSeries.Low, Period, i - 1);
                 barTime = MarketSeries.OpenTime[i];
                 return;
             }
@@ -63,7 +63,7 @@ namespace cAlgo
             barTime = MarketSeries.OpenTime[i];
             //--- データの取得
             double atr0 = atr.Result[i - 1];
-            double min0 = Lowest(MarketSeries.Close, Period, i - 1);
+            double min0 = Lowest(MarketSeries.Low, Period, i - 1);
             double max0 = Highest(MarketSeries.High, Period, i - 1);
             double h0 = MarketSeries.High[i - 1];
             double l0 = MarketSeries.Low[i - 1];
