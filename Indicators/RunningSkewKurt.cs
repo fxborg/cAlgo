@@ -13,8 +13,7 @@ namespace cAlgo
     {
         [Parameter("Period", DefaultValue = 20, MinValue = 1)]
         public int Period { get; set; }
-        [Parameter("Variance", DefaultValue = 2.0, MinValue = 0.01)]
-        public double Variance { get; set; }
+
         [Parameter("HTF", DefaultValue = "Hour")]
         public TimeFrame TF { get; set; }
         [Output("Skewness", Color = Colors.Blue, PlotType = PlotType.Line, LineStyle = LineStyle.Solid, Thickness = 1)]
